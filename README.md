@@ -1,2 +1,2 @@
-# Image Shader for MacOS APP
-image shader.
+# Image Compositing for MacOS APP
+image Compositing.
