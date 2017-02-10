@@ -15,12 +15,9 @@
     
     CGRect bounds=CGRectMake(0, 0, self.size.width, self.size.height);
     
-    NSRectFill(bounds);
     [tintColor setFill];
     
     CGContextRef context=[NSGraphicsContext currentContext].CGContext;
-    
-    CGContextAddRect(context, bounds);
     CGContextFillRect(context, bounds);
     
     /** 
