@@ -1,2 +1,3 @@
 # simpleShaderForMacOSAPP
-simple NSImage Category--NSImageTint
+image shader.
+作用：图片着色。
