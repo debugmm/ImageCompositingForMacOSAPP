@@ -17,15 +17,17 @@
     
     [tintColor setFill];
     
-    CGContextRef context=[NSGraphicsContext currentContext].CGContext;
-    CGContextFillRect(context, bounds);
-    
+//     CGContextRef context=[NSGraphicsContext currentContext].CGContext;
+//     CGContextFillRect(context, bounds);
+    NSRectFill(bounds);
     /** 
      *  @discussion the key parameter: operation.
      *              you should understand operation parameter.
      */
-    [self drawInRect:bounds fromRect:bounds operation:NSCompositingOperationOverlay fraction:1.0];//NSCompositingOperationOverlay
-    [self drawInRect:bounds fromRect:bounds operation:NSCompositingOperationDestinationIn fraction:1.0];//NSCompositingOperationDestinationIn
+    //NSCompositingOperationLuminosity vs NSCompositingOperationOverlay
+    //NSCompositingOperationDestinationIn
+    [self drawInRect:bounds fromRect:bounds operation:NSCompositingOperationLuminosity fraction:1.0];
+    [self drawInRect:bounds fromRect:bounds operation:NSCompositingOperationDestinationIn fraction:1.0];
     
     [self unlockFocus];
     
